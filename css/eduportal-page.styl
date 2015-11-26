@@ -1,4 +1,34 @@
 .eduportal-page
-  background: url(./assets/classifier-background.png) no-repeat center center
-  background-size: cover
-  height: 100%
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  padding: 10em 1em;
+  background: url(./assets/classifier-background.png) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  border: 1px solid #f30;
+  color: #fff;
+  
+  @media screen and (max-width: 900px)
+    flex-wrap: wrap;
+    background: #bcd;
+  
+  .controls
+    position: relative;
+    min-width: 320px;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #0f3;
+    
+  .visuals
+    position: relative;
+    min-width: 320px;
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid #03f;
+
+    canvas
+      display: block;
+      width: 100%;
+      background: #999;
