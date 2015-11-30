@@ -6,36 +6,23 @@ module.exports = React.createClass
 
   getInitialState: ->
     return {
-      data: "Initialisation"
+      userStatus: ""
     }
   
-  onClick: ->
-    @setState({
-      data: "CLICKED"
-    });
-
-  onChange: (text) ->
-    @setState({
-      data: "CHANGED"
-    });
-
+  toggleUserStatus: ->
+    if @state.userStatus == ""
+      @setState({
+        userStatus: "teacher"
+      });
+    else
+      @setState({
+        userStatus: ""
+      });
+      
   render: ->
     <div className="content">
-      <div className="controls">
-        <div className="console-out">{@state.data}</div>        
-        <div className="console-in">
-          <input
-            type="text"
-            ref="consoleIn"
-            placeholder="Test input..."
-            onChange={@onChange}
-            onClick={@onClick}
-          />
-          <button type="button" onClick={@onClick}>Click Me!</button>
-          <Link to="about" className="main-header-link">Go To</Link>
-        </div>
-      </div>
-      <div className="visuals">
-        <canvas id="eduportal" width="800" height="500"></canvas>
+      <div className="text">
+        <h1>[{@state.userStatus}]</h1>
+        <button type="button" onClick={@toggleUserStatus}>a {(@state.userStatus == "teacher") ? "TEACHER DASHBOARD" : "STUDENT/GENERAL DASHBOARD" } z</button>
       </div>
     </div>

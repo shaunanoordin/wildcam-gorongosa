@@ -7,6 +7,9 @@ module.exports =
     <Route name="classify" path="classify" handler={require './pages/classify'} ignoreScrollBehavior/>
     <Route name="eduportal-page-controller" path="eduportal" handler={require './pages/eduportal'} ignoreScrollBehavior>
       <DefaultRoute name="eduportal" handler={require './pages/eduportal/default'} />
+      <Route name="data-explorer" handler={require './pages/eduportal/data-explorer'} />
+      <Route name="group-management" handler={require './pages/eduportal/group-management'} />
+      <Route name="project-management" handler={require './pages/eduportal/project-management'} />
     </Route>
     <Route name="about-page-controller" path="about" handler={require './pages/about'} ignoreScrollBehavior>
       <DefaultRoute name="about" handler={require './pages/about/default'} />

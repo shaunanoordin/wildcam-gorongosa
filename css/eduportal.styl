@@ -1,3 +1,8 @@
+$primary-colour = #e37;
+$secondary-colour = #e37;
+$text-colour = #fff;
+$back-colour = #999;
+
 .eduportal-page
   display: flex;
   flex-direction: column;
@@ -6,14 +11,22 @@
   padding-top: 6em;
   background: url(./assets/classifier-background.png) no-repeat center center;
   background-size: cover;
-  border: 1px solid #3ff;
-  color: #fff;
+  border: 1px dotted $primary-colour;
+  color: $text-colour;
   
   .subheader
     border-radius: 1em;
     padding: 1em;
     margin: 0 2em;
     background: #ccc;
+    
+    a
+      padding: 0.5em 1em;
+      border-radius: 1em;
+      margin: 0 0.5em;
+      background: $primary-colour
+      color: #fff;
+      text-decoration: none;
 
   .content
     display: flex;
@@ -21,19 +34,22 @@
     //align-items: stretch;
     justify-content: center;
     padding: 1em;
-    border: 1px solid #f30;
+    border: 1px dotted $primary-colour;
   
     @media screen and (max-width: 900px)
       flex-wrap: wrap;
+      
+    .text
+      width: 100%;
+      padding: 1em;
+      margin: 0 1em 1em 1em;
+      background: $back-colour;
+      border-radius: 1em;
     
     .controls
-      position: relative;
-      min-width: 320px;
-      max-width: 400px;
-      width: 100%;
+      width: 20%;
       margin: 0 1em 1em 1em;
-      border: 1px solid #0f3;
-      background: #999;
+      background: $back-colour;
       border-radius: 1em;
       
       .console-in,
@@ -41,17 +57,13 @@
         padding: 1em;
         color: #333;
         background: #ccc;
-        border-radius: 1em;    
+        border-radius: 1em;
       
     .visuals
-      position: relative;
-      min-width: 320px;
-      max-width: 800px;
-      width: 100%;
+      width: 80%;
       margin: 0 1em 1em 1em;
       padding: 1em;
-      border: 1px solid #03f;
-      background: #999;
+      background: $back-colour;
       border-radius: 1em;
 
       canvas

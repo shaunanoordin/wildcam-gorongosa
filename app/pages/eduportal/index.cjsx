@@ -14,21 +14,6 @@ module.exports = React.createClass
     _.find @getRoutes(), (route) =>
       @.constructor is route.handler
 
-  getInitialState: ->
-    return {
-      data: "Initialisation"
-    }
-  
-  onClick: ->
-    @setState({
-      data: "CLICKED"
-    });
-
-  onChange: (text) ->
-    @setState({
-      data: "CHANGED"
-    });
-
   render: ->
     subPagesLinks = @getCurrentRoute().childRoutes.map (childRoute, i) ->
       <Link key={i} to={childRoute.name}>{childRoute.handler.displayName}</Link>
@@ -37,7 +22,7 @@ module.exports = React.createClass
   
     <div className="eduportal-page">
       <div className="subheader">
-        &raquo; {subPagesLinks}
+        {subPagesLinks}
       </div>
       <RouteHandler {...@props} />
     </div>
