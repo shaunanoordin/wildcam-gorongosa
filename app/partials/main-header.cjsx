@@ -15,7 +15,7 @@ counterpart.registerTranslations 'en',
       fieldGuide: 'Field Guide'
       talk: 'Talk'
       blog: 'Blog'
-      eduportal: 'Portal of Educationalism'
+      eduportal: 'Education Portal'
 
 module.exports = React.createClass
   displayName: 'MainHeader'

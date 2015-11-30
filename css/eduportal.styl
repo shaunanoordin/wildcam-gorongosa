@@ -1,0 +1,60 @@
+.eduportal-page
+  display: flex;
+  flex-direction: column;
+  //align-items: stretch;
+  justify-content: center;
+  padding-top: 6em;
+  background: url(./assets/classifier-background.png) no-repeat center center;
+  background-size: cover;
+  border: 1px solid #3ff;
+  color: #fff;
+  
+  .subheader
+    border-radius: 1em;
+    padding: 1em;
+    margin: 0 2em;
+    background: #ccc;
+
+  .content
+    display: flex;
+    flex-direction: row;
+    //align-items: stretch;
+    justify-content: center;
+    padding: 1em;
+    border: 1px solid #f30;
+  
+    @media screen and (max-width: 900px)
+      flex-wrap: wrap;
+    
+    .controls
+      position: relative;
+      min-width: 320px;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 1em 1em 1em;
+      border: 1px solid #0f3;
+      background: #999;
+      border-radius: 1em;
+      
+      .console-in,
+      .console-out
+        padding: 1em;
+        color: #333;
+        background: #ccc;
+        border-radius: 1em;    
+      
+    .visuals
+      position: relative;
+      min-width: 320px;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 1em 1em 1em;
+      padding: 1em;
+      border: 1px solid #03f;
+      background: #999;
+      border-radius: 1em;
+
+      canvas
+        display: block;
+        width: 100%;
+        background: #333;

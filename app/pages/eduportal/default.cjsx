@@ -1,8 +1,9 @@
 React = require 'react'
-counterpart = require 'counterpart'
-Translate = require 'react-translate-component'
+Router = {Link} = require 'react-router'
 
 module.exports = React.createClass
+  displayName: "Eduportal"
+
   getInitialState: ->
     return {
       data: "Initialisation"
@@ -19,7 +20,7 @@ module.exports = React.createClass
     });
 
   render: ->
-    <div className="eduportal-page">
+    <div className="content">
       <div className="controls">
         <div className="console-out">{@state.data}</div>        
         <div className="console-in">
@@ -30,7 +31,8 @@ module.exports = React.createClass
             onChange={@onChange}
             onClick={@onClick}
           />
-           <button type="button" onClick={@onClick}>Click Me!</button> 
+          <button type="button" onClick={@onClick}>Click Me!</button>
+          <Link to="about" className="main-header-link">Go To</Link>
         </div>
       </div>
       <div className="visuals">
